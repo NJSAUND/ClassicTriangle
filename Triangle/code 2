@@ -1,0 +1,55 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+public class Triangle {
+	public static void main(String[] args) 
+	{
+		File input = new File("input.txt");
+		Scanner scan;
+		try {
+			scan = new Scanner(input);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	    int sides[] = new int[3];
+	    for(int i = 0; i<sides.length; i++)
+	    {
+	        if(i == 0)
+	        {       	
+	            System.out.println("What is the measure of the first side?");
+	            Scanner side1 = new Scanner(System.in);
+	            sides[i] = side1.nextInt();
+	        }
+	        else if(i == 1)
+	        {
+	            System.out.println("What is the measure of the second side?");
+	            Scanner side2 = new Scanner(System.in);
+	            sides[i] = side2.nextInt();
+	        }
+	        else
+	        {
+	            System.out.println("What is the measure of the third side?");
+	            Scanner side3 = new Scanner(System.in);
+	            sides[i] = side3.nextInt();
+	        }
+	    }
+	    
+	    if(sides[0] == sides[1] && sides[1] == sides[2])
+	    {
+	        System.out.println("It's an equilateral triangle.");
+	    }
+	    else if(sides[0] == sides[1] || sides[1] == sides[2] || sides[1] == sides[2])
+	    {
+	        System.out.println("It's an isosceles triangle.");
+	    }
+	    else
+	    {
+	        System.out.println("It's a scalene triangle.");
+	    }
+	   scan.close(); 
+	}
+}
