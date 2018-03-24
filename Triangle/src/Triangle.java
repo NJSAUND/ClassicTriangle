@@ -2,32 +2,44 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.Arrays;
 
-
-public class Triangle {
+public class Triangle 
+{
 	public static void main(String[] args) 
 	{
-		/*Scanner file = new Scanner("input.txt");
-		//String triangleSide1 = "1 x 1";
-		//Scanner parse = new Scanner (triangleSide1);
-		file.useDelimiter(" ");
-		*/
-		try
-		{
+		int[] sides = readFiles("input.txt");
+		System.out.println(Arrays.toString(sides));
+	}
+	
+	public static int[] readFiles(String file) {
+		
+		try {
+			File f = new File(file);
+			Scanner s = new Scanner(f);
+			//file.useDelimiter(" ");
+			int ctr = 0;
 			
 			
-			int s1= file.nextInt();
-			System.out.println(s1);
-			int s2= file.nextInt();
-			System.out.println(s2);
-			int s3= file.nextInt();
-			System.out.println(s3);
-				
+			while (s.hasNextInt()) {
+				ctr++;
+				s.nextInt();
+			}
+			
+			int[] arr = new int[ctr];
+			
+			Scanner s1= new Scanner(f);
+			for(int i = 0; i < arr.length; i++)
+				arr[i] = s1.nextInt();
+			
+			return arr;
+			//Scanner file = new Scanner(new File("input.txt")); this should work, but have string file in method
+			
 		}
-		catch(InputMismatchException ime)
-		{
-			System.out.println("Error in data");
+		catch(Exception e) {
+			return null;
 			
 		}
+		
 	}
 }
