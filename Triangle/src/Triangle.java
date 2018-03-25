@@ -14,7 +14,7 @@ public class Triangle {
 		try { 
 			Scanner file = new Scanner( new File("input.txt")); // establishes scanner and file to be scanned
 			String parse; 
-			while((parse=file.nextLine())!=null) { 
+			while((parse = file.nextLine())!=null) { 
 				
 				array = parse.split(" "); // reads a space as a delimiter
 					if(array.length==3) {
@@ -32,17 +32,17 @@ public class Triangle {
 								else System.out.println("Scalene");
 							}
 							else {
-								System.out.println("Not a Triangle");
+								System.out.println("Not a Triangle because ");
 							}
 						}
 						catch(Exception e) {
 							
-							System.out.println("Not a Triangle");
+							System.out.println("Not a Triangle because ");
 						}
 		
 					}	
 			else{
-					System.out.println("Not a Triangle");
+					System.out.println("Not a Triangle because of ");
 				}
 			}
 		file.close();	
