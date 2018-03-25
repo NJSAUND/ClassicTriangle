@@ -1,13 +1,13 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.io.IOException;
-import java.util.Arrays;
+
 
 public class ReadFile {
 
 	public static void main(String[] args) throws Exception {
+		
 		Scanner sc = new Scanner(new File("input.txt"));
 		
 				try 
@@ -16,10 +16,13 @@ public class ReadFile {
 				
 					while(file.hasNext()) 
 					{
-					String s1 
+					
 					
 					}
 				
+				}
+				catch(Exception e) {
+					
 				}
 				
 					
