@@ -9,19 +9,19 @@ public class Triangle {
 	{
 
 		File fileName = new File("input.txt");
-		String arr[];
+		String array[];
 		int s1,s2,s3;
 		try { 
 			Scanner file = new Scanner( new File("input.txt"));
 			String parse;
 			while((parse=file.nextLine())!=null) {
 				
-				arr = parse.split(" ");
-					if(arr.length==3) {
+				array = parse.split(" ");
+					if(array.length==3) {
 						try {
-							s1 = Integer.parseInt(arr[0]);
-							s2 = Integer.parseInt(arr[1]);
-							s3 = Integer.parseInt(arr[2]);
+							s1 = Integer.parseInt(array[0]);
+							s2 = Integer.parseInt(array[1]);
+							s3 = Integer.parseInt(array[2]);
 							
 							if(s1+s2>=s3 && s2+s3>=s1 && s1+s3>=s2){
 								
