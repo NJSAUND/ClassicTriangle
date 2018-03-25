@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.Scanner;
+public class Triangle 
+{
+	public static void main(String[] args) throws IOException
+	{
+		Scanner file = new Scanner(new File("input.txt"));
+		file.useDelimiter(" ");
+	
+		for(int i = 0; i < 3; i++) {
+			boolean s1;
+			int s2,s3;
+			
+			
+			Scanner parse = new Scanner (file.nextLine());
+			while(parse.hasNextInt()){
+				s1 = parse.nextInt();
+				
+			}
+			
+			System.out.println(s1 + " "+ s2 + " " + s3);
+		}
+		
+	}
+	
+}
+				
+		
