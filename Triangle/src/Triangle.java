@@ -8,15 +8,15 @@ public class Triangle {
 	public static void main (String[] args)
 	{
 
-		File fileName = new File("input.txt");
+		File fileName = new File("input.txt"); // establishes file location
 		String array[];
 		int s1,s2,s3;
 		try { 
-			Scanner file = new Scanner( new File("input.txt"));
-			String parse;
-			while((parse=file.nextLine())!=null) {
+			Scanner file = new Scanner( new File("input.txt")); // establishes scanner and file to be scanned
+			String parse; 
+			while((parse=file.nextLine())!=null) { 
 				
-				array = parse.split(" ");
+				array = parse.split(" "); // reads a space as a delimiter
 					if(array.length==3) {
 						try {
 							s1 = Integer.parseInt(array[0]);
